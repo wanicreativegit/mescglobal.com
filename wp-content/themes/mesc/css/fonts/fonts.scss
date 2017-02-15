@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+h1, h2, h3, h4, h5, h6{
+  @include font_roboto(500);
+  color: color('font-color');
+  line-height: 1.2;
+  margin-bottom: 20px;
+  &[data-color='none']{
+    color: color('red');
+  }
+  &[data-color='red']{
+    color: color('red-active');
+  }
+  &[data-color='blue']{
+    color: color('blue');
+  }
+  &[data-color='green']{
+    color: color('green');
+  }
+  &[data-color='yellow']{
+    color: color('yellow');
+  }
+}
+
+a{
+  color: color('font-color');
+  text-decoration: none;
+  @include transition(all ease-in-out .3s);
+}
+
+a:hover,
+a:focus{
+  color: color('font-color');
+}
+
+h1{
+  @include font-size(40px);
+  @include respond-to('large'){
+    @include font-size(35px);
+  }
+}
+h2{
+  @include font-size(30px);
+  @include respond-to('large'){
+    @include font-size(25px);
+  }
+}
+
+h3{
+  @include font-size(25px);
+  @include respond-to('large'){
+    @include font-size(20px);
+  }
+}
+h4{
+  @include font-size(20px);
+}
+h5{
+  @include font-size(20px);
+}
+h6{
+  @include font-size(20px);
+}
+
+
+
+p {
+  margin:15px 0;
+  color: color('h-color');
+  @include font-size(19px);
+  line-height: 1.5 !important;
+  @include font_roboto(300);
+  @include respond-to('large'){
+    @include font-size(17px);
+  }
+
+}

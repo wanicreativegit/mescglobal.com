@@ -1,0 +1,72 @@
+
+.sectors{
+
+  position: relative;
+  display:block;
+
+  .sector{
+    height: 200px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    &:hover{
+      cursor: pointer;
+      .filter{
+        background-color: transparent !important;
+      }
+      h3{
+        color: #222;
+      }
+    }
+    h3{
+      color:#fff;
+      font-weight: 300;
+
+    }
+    .filter{
+      @include transition(all ease-in-out .3s);
+      position: absolute;
+      display: block;
+      width:100%;
+      height: 100%;
+      top:0;
+      left:0;
+      padding:20px;
+    }
+    &.blue{
+      .filter{
+        background-color: rgba(#12a8dc, .8);
+      }
+    }
+    &.red{
+      .filter{
+        background-color: rgba(#c13b1a, .8);
+      }
+    }
+    &.yellow{
+      .filter{
+        background-color: rgba(#f1d90d, .8);
+      }
+    }
+    &.green{
+      .filter{
+        background-color: rgba(#7db628, .8);
+      }
+    }
+
+    &.extra-height{
+      @include respond-to('small'){
+        &.none{
+          height: auto;
+        }
+      }
+      height: 400px;
+    }
+  }
+
+
+
+
+}

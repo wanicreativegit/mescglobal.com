@@ -1,0 +1,195 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%; }
+
+body {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  font-family: 'Roboto', sans-serif; }
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+/* html element 62.5% font-size for REM use */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* clear */
+.clear:before,
+.clear:after {
+  content: ' ';
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
+.clear {
+  *zoom: 1; }
+
+.color.red {
+  background-color: #ea5228; }
+.color.yellow {
+  background-color: #f1e60d; }
+.color.blue {
+  background-color: #12a8dc; }
+.color.green {
+  background-color: #7db628; }
+
+.content {
+  position: absolute;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh; }
+  .content .block {
+    height: 100%;
+    float: left;
+    position: relative;
+    display: inline-block; }
+    .content .block.left {
+      width: 60%; }
+    .content .block.right {
+      width: 40%; }
+    .content .block .block-small {
+      width: 100%;
+      height: 50vh; }
+  .content .box {
+    width: 80%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    background-color: #ea5228; }
+    .content .box .anim {
+      position: absolute;
+      top: 60%;
+      width: 40%;
+      left: 44%;
+      z-index: 9999; }
+    .content .box .block {
+      padding: 50px;
+      height: 100%; }
+      .content .box .block .line {
+        height: 100%;
+        position: relative; }
+        .content .box .block .line.top {
+          height: 20%; }
+        .content .box .block .line.middle {
+          height: 30%; }
+        .content .box .block .line.bottom {
+          height: 50%; }
+        .content .box .block .line .logo {
+          background-image: url("logo.svg");
+          background-repeat: no-repeat;
+          background-position: center right;
+          width: calc(100% - 100px);
+          height: 200px;
+          right: 0;
+          bottom: 0;
+          position: absolute; }
+      .content .box .block .center-all {
+        width: 100%; }
+        .content .box .block .center-all svg {
+          width: 100%; }
+      .content .box .block .right, .content .box .block .light {
+        height: 100%; }
+      .content .box .block.left {
+        text-align: right;
+        width: 62.5%;
+        height: 100%; }
+        .content .box .block.left #clockdiv {
+          visibility: hidden; }
+        .content .box .block.left .left {
+          height: 100%; }
+        .content .box .block.left p {
+          color: #a83215;
+          max-width: 490px;
+          padding: 50px 0;
+          float: left;
+          right: 0;
+          top: 0;
+          position: absolute;
+          text-align: left; }
+      .content .box .block.right {
+        width: 37.5%;
+        background: #fff;
+        text-align: left;
+        height: 100%; }
+        .content .box .block.right h1 {
+          position: absolute;
+          bottom: 20px;
+          max-width: 50%;
+          font-weight: 100;
+          line-height: 1em;
+          text-transform: uppercase;
+          font-size: 70px; }
+
+.contacts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left; }
+  .contacts div {
+    display: inline-block;
+    padding: 10px 10px 0 40px; }
+    .contacts div.mail {
+      background-image: url("mail.png");
+      background-position: left center;
+      background-repeat: no-repeat; }
+    .contacts div.phone {
+      background-image: url("phone.png");
+      background-position: left center;
+      background-repeat: no-repeat; }
+
+.relative-box {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: auto;
+  height: 80%;
+  margin-top: 5%; }
+  .relative-box .left {
+    width: 62.5%; }
+
+ul#countdown {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  color: #000;
+  overflow: hidden;
+  font-weight: bold; }
+  ul#countdown li {
+    margin: 0 5px 0 0;
+    display: block;
+    width: calc(25% - 5px);
+    padding: 0;
+    font-size: 50px;
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 15px 0;
+    float: left; }
+    @media screen and (max-width: 1300px) {
+      ul#countdown li {
+        width: calc(50% - 5px); } }
+    ul#countdown li .label {
+      color: #000;
+      font-size: 16px;
+      text-transform: uppercase; }
+
+.line {
+  position: relative;
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */

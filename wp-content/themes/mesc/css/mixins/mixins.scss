@@ -1,0 +1,105 @@
+$colors: (
+        'red': #ea5228,
+        'red-light': rgba(#ea5228, .8),
+        'red-active': #c13b1a,
+        'red-active-light': rgba(#c13b1a, .8),
+        'blue': #12a8dc,
+        'blue-light': rgba(#12a8dc, .8),
+        'yellow': #f1d90d,
+        'yellow-light': rgba(#f1e60d, .8),
+        'green': #7db628,
+        'green-light': #97c553,
+        'font-color': #000,
+        'grey': #f1f1f1,
+        'grey-dark': #909090
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin font_roboto($w: 400) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $w;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin relative($d: block) {
+  position: relative;
+  display: $d;
+}
+
+@mixin base-padding() {
+  padding: 30px;
+}
+
+@mixin space-padding() {
+  padding: 120px 0;
+}
+
+@mixin reset-padding-margin() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin respond-to($breakpoint, $size: 0, $maxmin: max-width) {
+
+  @if $breakpoint == "small" {
+    @media screen and ($maxmin: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media screen and ($maxmin: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == "s-large" {
+    @media screen and ($maxmin: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media screen and ($maxmin: 1500px) {
+      @content;
+    }
+  } @else if $breakpoint == "custom" {
+    @media screen and ($maxmin: $size) {
+      @content;
+    }
+  } @else if $breakpoint == 'landscape' {
+    @media screen and (orientation: landscape) and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+}

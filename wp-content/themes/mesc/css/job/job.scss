@@ -1,0 +1,877 @@
+.job_list{
+
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 100%;
+
+  .job{
+    padding:55px;
+    position: relative;
+    display: block;
+    @include respond-to('large'){
+      padding:55px 40px;
+    }
+    @include respond-to('medium'){
+      padding:20px 20px;
+    }
+    @include respond-to('small'){
+      width:100%;
+    }
+
+    h3{
+      @include transition(all ease-in-out .2s);
+    }
+    .info{
+      position: relative;
+      display: block;
+      padding:20px 0;
+      color: color('grey-dark');
+      @include transition(all ease-in-out .2s);
+      .city{
+        padding:10px 30px;
+        background-image: url('../img/place.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 15px;
+      }
+      .salary{
+        padding:10px 30px;
+        background-image: url('../img/salary.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 20px;
+      }
+      .date{
+        padding:10px 30px;
+        background-image: url('../img/date.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 20px;
+      }
+      .type{
+        padding:10px 30px;
+        background-image: url('../img/internship.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 22px;
+      }
+
+    }
+    .desc{
+      color: color('grey-dark');
+      @include transition(all ease-in-out .2s);
+    }
+    .keys{
+      position: relative;
+      display: block;
+      padding:20px 0;
+      color: color('grey-dark');
+      font-weight: 700;
+      @include transition(all ease-in-out .2s);
+      a{
+        color: color('grey-dark');
+      }
+      .r_more{
+        background-image: url('../img/more.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 10%;
+        padding:0 30px;
+      }
+      .shortlist{
+        background-image: url('../img/star.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 10%;
+        padding:0 30px;
+      }
+    }
+    .more{
+      background: color('grey-dark');
+      width: 100%;
+      @include font-size(15px);
+      background-size: 8px;
+      display: inline-block;
+      padding: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      border:none;
+      @include respond-to('medium'){
+        width: 100%;
+      }
+    }
+
+    @include transition(all ease-in-out .2s);
+
+    &[data-color='green']{
+
+      hr{
+        border-color: color('green');
+        background: color('green');
+      }
+      &:hover{
+        background-color: color('green');
+
+        .info, .desc, .keys{
+          color:#fff;
+          a{
+            color:#fff;
+          }
+        }
+        .keys{
+          .r_more{
+            background-image: url('../img/more-active.png');
+          }
+          .shortlist{
+            background-image: url('../img/star-active.png');
+          }
+        }
+        .info{
+          .city{
+            background-image: url('../img/place-active.png');
+          }
+          .salary{
+            background-image: url('../img/salary-active.png');
+          }
+          .date{
+            background-image: url('../img/date-active.png');
+          }
+          .type{
+            background-image: url('../img/internship-active.png');
+          }
+        }
+        .more{
+          background-color: #fff;
+          color: color('green');
+        }
+        h3{
+          color:#fff;
+        }
+        hr{
+          border-color: #fff;
+          background: #fff;
+        }
+      }
+    }
+    &[data-color='blue']{
+
+      hr{
+        border-color: color('blue');
+        background: color('blue');
+      }
+      &:hover{
+        background-color: color('blue');
+
+        .info, .desc, .keys{
+          color:#fff;
+          a{
+            color:#fff;
+          }
+        }
+        .keys{
+          .r_more{
+            background-image: url('../img/more-active.png');
+          }
+          .shortlist{
+            background-image: url('../img/star-active.png');
+          }
+        }
+        .info{
+          .city{
+            background-image: url('../img/place-active.png');
+          }
+          .salary{
+            background-image: url('../img/salary-active.png');
+          }
+          .date{
+            background-image: url('../img/date-active.png');
+          }
+          .type{
+            background-image: url('../img/internship-active.png');
+          }
+        }
+        .more{
+          background-color: #fff;
+          color: color('blue');
+        }
+        h3{
+          color:#fff;
+        }
+        hr{
+          border-color: #fff;
+          background: #fff;
+        }
+      }
+    }
+    &[data-color='yellow']{
+
+      hr{
+        border-color: color('yellow');
+        background: color('yellow');
+      }
+      &:hover{
+        background-color: color('yellow');
+
+        .info, .desc, .keys{
+          color:#fff;
+          a{
+            color:#fff;
+          }
+        }
+        .keys{
+          .r_more{
+            background-image: url('../img/more-active.png');
+          }
+          .shortlist{
+            background-image: url('../img/star-active.png');
+          }
+        }
+        .info{
+          .city{
+            background-image: url('../img/place-active.png');
+          }
+          .salary{
+            background-image: url('../img/salary-active.png');
+          }
+          .date{
+            background-image: url('../img/date-active.png');
+          }
+          .type{
+            background-image: url('../img/internship-active.png');
+          }
+        }
+        .more{
+          background-color: #fff;
+          color: color('yellow');
+        }
+        h3{
+          color:#fff;
+        }
+        hr{
+          border-color: #fff;
+          background: #fff;
+        }
+      }
+    }
+    &[data-color='red']{
+
+      hr{
+        border-color: color('red');
+        background: color('red');
+      }
+      &:hover{
+        background-color: color('red');
+
+        .info, .desc, .keys{
+          color:#fff;
+          a{
+            color:#fff;
+          }
+        }
+        .keys{
+          .r_more{
+            background-image: url('../img/more-active.png');
+          }
+          .shortlist{
+            background-image: url('../img/star-active.png');
+          }
+        }
+        .info{
+          .city{
+            background-image: url('../img/place-active.png');
+          }
+          .salary{
+            background-image: url('../img/salary-active.png');
+          }
+          .date{
+            background-image: url('../img/date-active.png');
+          }
+          .type{
+            background-image: url('../img/internship-active.png');
+          }
+        }
+        .more{
+          background-color: #fff;
+          color: color('red');
+        }
+        h3{
+          color:#fff;
+        }
+        hr{
+          border-color: #fff;
+          background: #fff;
+        }
+      }
+    }
+
+
+  }
+
+  .pagination{
+    padding:110px 0;
+    text-align: center;
+
+    ul{
+      list-style: none;
+
+      li{
+        display: inline-block;
+        position: relative;
+        color:#000;
+        padding:30px 0;
+        background-color: color('grey');
+        &.active{
+          background-color: color('grey-dark');
+          a{
+            color:#fff;
+            background-color: color('grey-dark');
+            text-decoration: none;
+          }
+        }
+        a{
+          color:#000;
+          padding:30px;
+          background-color: color('grey');
+          text-decoration: none;
+          &.next{
+            background-image: url(../img/next-arrow.png);
+            background-repeat: no-repeat;
+            background-position: 90%;
+            padding-right: 60px;
+            background-size: 30px;
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.filter.job{
+  background: rgba(#12a8dc, .8);
+  width: 100%;
+  position: absolute;
+  padding-left:10%;
+  z-index:999;
+  a{
+    padding:60px 0;
+    position: relative;
+    display: block;
+    z-index:9999;
+    color:#fff;
+    &:hover{
+      color:#fff;
+    }
+    @include respond-to('small'){
+      padding: 30px 0;
+    }
+    &.back{
+      padding-left: 70px;
+      background-image: url('../img/arrow-left.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 40px;
+    }
+    &.next{
+      padding-right: 70px;
+      display: inline-block;
+      position: relative;
+      background-image: url('../img/arrow-right.png');
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 40px;
+    }
+  }
+}
+
+.job_inside{
+
+  h3{
+    @include transition(all ease-in-out .2s);
+  }
+
+  .content{
+    padding:180px 120px;
+    background-color: color('grey');
+    position: relative;
+    @include respond-to('medium'){
+      padding:140px 60px;
+    }
+    @include respond-to('small'){
+      padding:30px;
+    }
+    &:after{
+      top: 0;
+      right: -50%;
+      background-color: #f1f1f1;
+      height: 100%;
+      z-index: -999;
+      position: absolute;
+      width: 50%;
+      content: "";
+      @include respond-to('small'){
+        display: none;
+      }
+
+    }
+  }
+
+  .form{
+
+    background: color('blue-light');
+    color:#fff;
+    padding:60px;
+    margin-top:60px;
+    width: calc(100% - 120px);
+    @include respond-to('medium'){
+      width: calc(100% - 60px);
+      margin-top:30px;
+    }
+    @include respond-to('small'){
+      width: 100%;
+      padding:30px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel]{
+      width: 100%;
+      background: transparent;
+      margin:20px 0;
+      padding:10px 0;
+      text-align: right;
+      border: none;
+      border-bottom:2px solid color('blue');
+      &:before{
+        background-color: color('blue');
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    textarea{
+      border: none;
+      border-bottom:2px solid color('blue');
+    }
+    input[type=submit]{
+      background-color: color('blue');
+      border: none;
+      width: 100%;
+      max-width: 300px;
+      text-transform: uppercase;
+      padding:10px 0;
+      text-align: center;
+      margin:0 auto;
+      display: block;
+      position: relative;
+    }
+
+  }
+
+  .info-block{
+
+    margin-top: 180px;
+    @include respond-to('small'){
+      margin-top: 100px;
+    }
+  }
+
+  .info{
+    position: relative;
+    display: block;
+    padding:20px 0;
+    color: color('grey-dark');
+    @include transition(all ease-in-out .2s);
+
+    .city{
+      padding:30px 50px;
+      background-image: url('../img/place-big.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 30px;
+      @include respond-to('small'){
+        background-size: 20px;
+        padding:20px 0;
+        padding-left:40px;
+      }
+    }
+    .salary{
+      padding:30px 50px;
+      background-image: url('../img/salary-big.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 40px;
+      @include respond-to('small'){
+        background-size: 20px;
+        padding:20px 0;
+        padding-left:40px;
+      }
+    }
+    .date{
+      padding:30px 50px;
+      background-image: url('../img/date-big.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 40px;
+      @include respond-to('small'){
+        background-size: 20px;
+        padding:20px 0;
+        padding-left:40px;
+      }
+    }
+    .type{
+      padding:30px 50px;
+      background-image: url('../img/type-big.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 42px;
+      @include respond-to('small'){
+        background-size: 20px;
+        padding:20px 0;
+        padding-left:40px;
+      }
+    }
+
+  }
+  .desc{
+    color: color('grey-dark');
+    @include transition(all ease-in-out .2s);
+  }
+  .keys{
+    position: relative;
+    display: block;
+    padding:20px 0;
+    color: color('grey-dark');
+    font-weight: 700;
+    @include transition(all ease-in-out .2s);
+    a{
+      color: color('grey-dark');
+    }
+    .r_more{
+      background-image: url('../img/more.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 10%;
+      padding:0 30px;
+    }
+    .shortlist{
+      background-image: url('../img/star.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 10%;
+      padding:0 30px;
+    }
+  }
+  .more{
+    background: color('grey-dark');
+    width: 100%;
+    @include font-size(15px);
+    background-size: 8px;
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border:none;
+    @include respond-to('medium'){
+      width: 100%;
+    }
+  }
+
+  @include transition(all ease-in-out .2s);
+
+  &[data-color='green']{
+
+    hr{
+      border-color: color('green');
+      background: color('green');
+    }
+    &:hover{
+      background-color: color('green');
+
+      .info, .desc, .keys{
+        color:#fff;
+        a{
+          color:#fff;
+        }
+      }
+      .keys{
+        .r_more{
+          background-image: url('../img/more-active.png');
+        }
+        .shortlist{
+          background-image: url('../img/star-active.png');
+        }
+      }
+      .info{
+        .city{
+          background-image: url('../img/place-active.png');
+        }
+        .salary{
+          background-image: url('../img/salary-active.png');
+        }
+        .date{
+          background-image: url('../img/date-active.png');
+        }
+        .type{
+          background-image: url('../img/internship-active.png');
+        }
+      }
+      .more{
+        background-color: #fff;
+        color: color('green');
+      }
+      h3{
+        color:#fff;
+      }
+      hr{
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+  }
+  &[data-color='blue']{
+
+    hr{
+      border-color: color('blue');
+      background: color('blue');
+    }
+    &:hover{
+      background-color: color('blue');
+
+      .info, .desc, .keys{
+        color:#fff;
+        a{
+          color:#fff;
+        }
+      }
+      .keys{
+        .r_more{
+          background-image: url('../img/more-active.png');
+        }
+        .shortlist{
+          background-image: url('../img/star-active.png');
+        }
+      }
+      .info{
+        .city{
+          background-image: url('../img/place-active.png');
+        }
+        .salary{
+          background-image: url('../img/salary-active.png');
+        }
+        .date{
+          background-image: url('../img/date-active.png');
+        }
+        .type{
+          background-image: url('../img/internship-active.png');
+        }
+      }
+      .more{
+        background-color: #fff;
+        color: color('blue');
+      }
+      h3{
+        color:#fff;
+      }
+      hr{
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+  }
+  &[data-color='yellow']{
+
+    hr{
+      border-color: color('yellow');
+      background: color('yellow');
+    }
+    &:hover{
+      background-color: color('yellow');
+
+      .info, .desc, .keys{
+        color:#fff;
+        a{
+          color:#fff;
+        }
+      }
+      .keys{
+        .r_more{
+          background-image: url('../img/more-active.png');
+        }
+        .shortlist{
+          background-image: url('../img/star-active.png');
+        }
+      }
+      .info{
+        .city{
+          background-image: url('../img/place-active.png');
+        }
+        .salary{
+          background-image: url('../img/salary-active.png');
+        }
+        .date{
+          background-image: url('../img/date-active.png');
+        }
+        .type{
+          background-image: url('../img/internship-active.png');
+        }
+      }
+      .more{
+        background-color: #fff;
+        color: color('yellow');
+      }
+      h3{
+        color:#fff;
+      }
+      hr{
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+  }
+  &[data-color='red']{
+
+    hr{
+      border-color: color('red-active');
+      background: color('red-active');
+    }
+    &:hover{
+      background-color: color('red-active');
+
+      .info, .desc, .keys{
+        color:#fff;
+        a{
+          color:#fff;
+        }
+      }
+      .keys{
+        .r_more{
+          background-image: url('../img/more-active.png');
+        }
+        .shortlist{
+          background-image: url('../img/star-active.png');
+        }
+      }
+      .info{
+        .city{
+          background-image: url('../img/place-active.png');
+        }
+        .salary{
+          background-image: url('../img/salary-active.png');
+        }
+        .date{
+          background-image: url('../img/date-active.png');
+        }
+        .type{
+          background-image: url('../img/internship-active.png');
+        }
+      }
+      .more{
+        background-color: #fff;
+        color: color('red-active');
+      }
+      h3{
+        color:#fff;
+      }
+      hr{
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+  }
+
+
+  #file-upload {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label[for="file-upload"]{
+    display:inline-block;
+    background:color('blue');
+    position: absolute;
+    padding:10px;
+    color: transparent;
+    margin-top: 20px;
+    cursor:pointer;
+    &:after{
+      content:"+";
+      @include font-size(25px);
+      color:#fff;
+      position: absolute;
+      top: 3px;
+      left: 30px;
+    }
+  }
+  #filename{
+    position: relative;
+    float:left;
+    width: 100%;
+    background: transparent;
+    margin:20px 0;
+    padding:10px 0;
+    text-align: right;
+    border: none;
+    border-bottom:2px solid color('blue');
+    white-space: nowrap;
+    overflow:hidden;
+  }
+
+  .filter{
+    &[data-color="blue"]{
+      background-color: color('blue-light');
+      padding: 60px 0;
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: block;
+    }
+
+  }
+
+}
+
+
+
+input[type=checkbox].css-checkbox {
+  position:absolute;
+  z-index:-1000;
+  left:-1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height:1px;
+  width:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label.clr {
+  padding-left:29px;
+  height:24px;
+  display:inline-block;
+  line-height:24px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  vertical-align:middle;
+  cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox + label.css-label.chk {
+  background-position: 0 -24px;
+}
+label.css-label {
+  background-image: url('../img/checkbox.png');
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

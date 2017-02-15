@@ -1,0 +1,291 @@
+
+$blue: #12a8dc;
+$yellow: #f1e60d;
+$green: #7db628;
+$red: #ea5228;
+
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+*{
+  margin:0;
+  padding:0;
+}
+/* clear */
+.clear:before,
+.clear:after {
+  content:' ';
+  display:table;
+}
+
+.clear:after {
+  clear:both;
+}
+.clear {
+  *zoom:1;
+}
+
+
+.color{
+
+  &.red{
+    background-color: $red;
+  }
+  &.yellow{
+    background-color: $yellow;
+  }
+  &.blue{
+    background-color: $blue;
+  }
+  &.green{
+    background-color: $green;
+  }
+
+}
+
+
+.content{
+
+  position: absolute;
+  display: inline-block;
+  width:100vw;
+  height:100vh;
+  .block{
+    &.left{
+      width:60%;
+    }
+    &.right{
+      width:40%;
+    }
+    height:100%;
+    float:left;
+    position: relative;
+    display: inline-block;
+    .block-small{
+      width:100%;
+      height: 50vh;
+    }
+  }
+
+  .box{
+    width:80%;
+    height: 80%;
+    top: 0;
+    left:0;
+    right:0;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    background-color: $red;
+
+    .anim{
+      position: absolute;
+      top:60%;
+      width: 40%;
+      left: 44%;
+      z-index: 9999;
+    }
+    .block{
+      padding:50px;
+      height: 100%;
+      .line{
+        height:100%;
+        position: relative;
+
+        &.top{
+          height:20%;
+        }
+        &.middle{
+          height:30%;
+        }
+        &.bottom{
+          height:50%;
+        }
+
+        .logo{
+          background-image:url('logo.svg');
+          background-repeat: no-repeat;
+          background-position: center right;
+          width:calc(100% - 100px);
+          height:200px;
+          right:0;
+          bottom:0;
+          position:absolute;
+        }
+
+
+      }
+
+      .center-all{
+        width:100%;
+        svg{
+          width:100%;
+        }
+      }
+
+      .right, .light{
+        height: 100%;
+      }
+      &.left{
+        text-align:right;
+        width:62.5%;
+        height: 100%;
+
+        #clockdiv{
+          visibility: hidden;
+        }
+
+        .left{
+          height:100%;
+        }
+
+        p{
+          color: #a83215;
+          max-width: 490px;
+          padding: 50px 0;
+          float: left;
+          right: 0;
+          top: 0;
+          position: absolute;
+          text-align: left;
+        }
+      }
+      &.right{
+        width:37.5%;
+        background:#fff;
+        text-align: left;
+        height:100%;
+
+        h1{
+          position:absolute;
+          bottom:20px;
+          max-width: 50%;
+          font-weight: 100;
+          line-height: 1em;
+          text-transform: uppercase;
+          font-size: 70px;
+        }
+      }
+      .content{
+        .logo{
+
+        }
+      }
+    }
+  }
+}
+
+
+.contacts{
+
+  position: absolute;
+  bottom:0;
+  width:100%;
+  text-align:left;
+  div{
+    display:inline-block;
+    padding:10px 10px 0 40px;
+
+    &.mail{
+      background-image:url('mail.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+    &.phone{
+      background-image:url('phone.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.relative-box{
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: auto;
+  height: 80%;
+  margin-top: 5%;
+
+  .left{
+    width:62.5%;
+
+
+  }
+}
+
+
+
+
+ul#countdown {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  color: #000;
+  overflow: hidden;
+  font-weight: bold;
+
+  li {
+    margin: 0 5px 0 0;
+    display: block;
+    width: calc(25% - 5px);
+    @media screen and (max-width:1300px){
+      width: calc(50% - 5px);
+    }
+    padding: 0;
+    font-size: 50px;
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 15px 0;
+    float: left;
+
+    .label {
+      color: #000;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.line{
+  position: relative;
+  display: block;
+}
