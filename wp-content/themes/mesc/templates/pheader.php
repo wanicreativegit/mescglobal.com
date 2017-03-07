@@ -116,12 +116,6 @@ $color = get_field('color', get_the_ID());
     <div class="blur">
 
     </div>
-    <div class="social">
-        <div class="fb">
-        </div>
-        <div class="tw">
-        </div>
-    </div>
 </div>
 
 
