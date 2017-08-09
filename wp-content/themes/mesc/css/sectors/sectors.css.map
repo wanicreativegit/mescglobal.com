@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEE,6BAAW;EACT,OAAO,EAAC,EAAE;AAGZ,cAAK;EACH,gBAAgB,EAAE,aAAa;AAEjC,aAAI;EACF,gBAAgB,EAAE,YAAY",
-"sources": ["sectors.scss"],
-"names": [],
-"file": "sectors.css"
-}

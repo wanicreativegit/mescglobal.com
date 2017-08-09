@@ -103,7 +103,7 @@ function sdt_remove_ver_css_js($src)
 
 function wanicrea_styles()
 {
-    wp_register_style('wanicrea', get_template_directory_uri() . '/css/style.css', array());
+    wp_register_style('wanicrea', get_template_directory_uri() . '/css/style.min.css', array());
     wp_enqueue_style('wanicrea'); // Enqueue it!
 }
 

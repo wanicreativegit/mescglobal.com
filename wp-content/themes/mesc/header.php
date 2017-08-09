@@ -9,7 +9,7 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="<?php echo get_template_directory_uri(); ?>/img/mesc-icon-2.png" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/img/mesc-icon-2.png" rel="apple-touch-icon-precomposed">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300,400,500,700" rel="stylesheet">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

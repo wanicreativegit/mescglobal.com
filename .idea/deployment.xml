@@ -7,6 +7,9 @@
           <mappings>
             <mapping deploy="/public_html" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/wp-content/themes/mesc/node_modules" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
